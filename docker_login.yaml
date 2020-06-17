@@ -1,0 +1,10 @@
+---
+ - hosts: production 
+   become: true
+   vars_files:
+     - secret.yaml
+   tasks:
+    - name: Log into DockerHub
+      docker_login:
+       username: "{{ docker_username }}" 
+       password: "{{ docker_password }}"

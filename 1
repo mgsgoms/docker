@@ -1,0 +1,8 @@
+---
+ - hosts: test 
+   become: true
+   tasks:
+    - name: Log into DockerHub
+      docker_login:
+       username: cubensquare
+       password: xxxxxxxxxx
